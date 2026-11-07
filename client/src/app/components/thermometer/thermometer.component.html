@@ -1,6 +1,21 @@
 <div class="progress">
 	<!--TODO: set style.background-color based on the level of popularity and style.width via the popularity's percent. Display percent.-->
-  <div class="progress-bar" role="progressbar">
-  	<span class="progress-bar-text">???: ???</span>
-  </div>
+  
+  @if(popularity.percent <= 0.50) {
+    <div class="progress-bar bg-danger" role="progressbar" [style.width]="popularity.percentageString" >
+      <span class="progress-bar-text">Popularity: {{popularity.percentageString}}</span>
+    </div>
+  }
+  @if(popularity.percent > 0.51 && popularity.percent <= 0.75) {
+    <div class="progress-bar bg-warning" role="progressbar" [style.width]="popularity.percentageString" >
+      <span class="progress-bar-text">Popularity: {{popularity.percentageString}}</span>
+    </div>
+  }
+  @if(popularity.percent > 0.75) {
+    <div class="progress-bar bg-success" role="progressbar" [style.width]="popularity.percentageString" >
+      <span class="progress-bar-text">Popularity: {{popularity.percentageString}}</span>
+    </div>
+  }
+  
+  
 </div>
