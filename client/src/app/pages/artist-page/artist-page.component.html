@@ -13,7 +13,7 @@
 		<div class="col-xl-4 col-12">
 			<h3>Popularity</h3>
 			<!--TODO: display the number of followers, formatted with commas for thousands/millions-->
-			<p>{{artist.followers}} followers</p>
+			<p>{{artist.followersStr}} followers</p>
 			<app-thermometer [popularity]="artist.popularity"></app-thermometer>
 			<!--TODO: display artist name-->
 			<h3>{{artist.name}}'s Albums</h3>
